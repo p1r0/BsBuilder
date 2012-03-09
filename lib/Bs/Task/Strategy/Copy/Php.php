@@ -80,6 +80,7 @@ class Bs_Task_Strategy_Copy_Php implements Bs_Task_Strategy_Copy
         
         if($this->_useMemory)
         {
+            @mkdir('./.build_data');
             file_put_contents('./.build_data/'.$this->_memoryFile, 
                               serialize($this->_checksums));
         }
