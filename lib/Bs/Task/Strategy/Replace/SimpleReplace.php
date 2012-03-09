@@ -12,6 +12,13 @@ class Bs_Task_Strategy_Replace_SimpleReplace implements Bs_Task_Strategy_Replace
 
     public function replace($value, $newvalue, $file)
     {
+        if(!file_exists($file))
+        {
+            $console = new Bs_Console();
+            $console->printLn('WARNING! File "'.$file.'" not found for replace. Nothing done.',
+                              'red');
+            return;
+        }
         file_put_contents($file, str_replace($value, $newvalue, file_get_contents($file)));
     }
 
