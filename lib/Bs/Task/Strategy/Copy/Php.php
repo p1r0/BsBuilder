@@ -225,7 +225,7 @@ class Bs_Task_Strategy_Copy_Php implements Bs_Task_Strategy_Copy
     
     protected function _getChecksum($file)
     {
-        $cmd = 'md5sum '.$file;
+        $cmd = 'md5sum "'.$file.'"';
         return substr(exec($cmd), 0, 32);
     }
 }
