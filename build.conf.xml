@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name='BsBuilder' default='all'>
+    
+    <property name='basedir' value='/tmp/bsbuilder' />
+
+    <target name='all'>
+        <tasks>
+            <mkdir dirname='${basedir}/all' /> 
+            
+            <version type='build' file='version.txt' property='version' />
+            
+            <property name='tarfile' value='bsbuilder-v${version}-${compact_date}.tar.bz2' />
+
+            <copy strategy='php' source='.' dest='${basedir}/all'>
+                <ignore name='./test' />
+                <ignore name='./build.conf.xml' />
+                <ignore name='./.build_data' />
+                <ignore name='./.gitignore' />
+                <ignore name='./.git' />
+            </copy>
+
+            <package strategy='tar_bz2' name='${tarfile}' dest='${basedir}/all'  />
+            
+            <echo text='Package save as: ${basedir}/dist/${tarfile}' />
+            <echo text='' />
+            <echo text="It's recommended to create a GIT tag for this version using: " 
+                  color='yellow'/>
+            <echo text="git tag -a v${version} -m 'version ${version} created by bsbuilder v${bsbuilder_version}'" 
+                  color='yellow'/>
+            <echo text="git push origin v${version}" color='yellow'/>
+        </tasks>
+    </target>
+    
+    <target name='clean'>
+        <tasks>
+            <delete dirname='${basedir}' />
+        </tasks>
+    </target>
+</project>
