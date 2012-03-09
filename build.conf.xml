@@ -19,6 +19,9 @@
                 <ignore name='./.gitignore' />
                 <ignore name='./.git' />
             </copy>
+            
+            <rename origin='${basedir}/all/bsbuild.php' 
+                    dest='${basedir}/all/bsbuild' />
 
             <package strategy='tar_bz2' name='${tarfile}' dest='${basedir}/all'  />
             
