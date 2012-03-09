@@ -4,7 +4,6 @@ class Bs_Task_Strategy_Copy_Php implements Bs_Task_Strategy_Copy
 {
 
     protected $_ignores = array();
-    protected $_ignoresRegExp = array();
     protected $_fileList = array();
     protected $_dirList = array();
     protected $_useMemory = false;
@@ -50,15 +49,14 @@ class Bs_Task_Strategy_Copy_Php implements Bs_Task_Strategy_Copy
             {
                 $type = $this->_project->replaceProperties($type->nodeValue);
             }
-
-            if($type == 'regexp')
-            {
-                $this->_ignoresRegExp[] = $this->_project->replaceProperties($ignore->attributes->getNamedItem('name')->nodeValue);
-            }
             else
             {
-                $this->_ignores[] = $this->_project->replaceProperties($ignore->attributes->getNamedItem('name')->nodeValue);
+                $type = 'plain';
             }
+
+            $expression = $ignore->attributes->getNamedItem('name')->nodeValue;
+            
+            $this->_ignores[] = new Bs_Filter($expression, $type);
         }
     }
 
@@ -144,15 +142,9 @@ class Bs_Task_Strategy_Copy_Php implements Bs_Task_Strategy_Copy
 
     protected function _isIgnored($path)
     {
-        if (in_array($path, $this->_ignores))
+        foreach($this->_ignores as $filter)
         {
-            return true;
-        }
-        
-        //Now regexps
-        foreach($this->_ignoresRegExp as $pattern)
-        {
-            if(preg_match($pattern, $path) > 0)
+            if($filter->match($path))
             {
                 return true;
             }
