@@ -12,7 +12,10 @@ Contents:
    :maxdepth: 2
 
    intro
+   setting_up
    getting_started
+   tasks_common
+   downloads
 
 Indices and tables
 ==================

@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Introduction &mdash; BsBuilder v0.1.x documentation</title>
+    <title>Setting BsBuilder Up &mdash; BsBuilder v0.1.x documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="BsBuilder v0.1.x documentation" href="index.html" />
     <link rel="next" title="Getting Started" href="getting_started.html" />
-    <link rel="prev" title="Welcome to BsBuilder’s documentation!" href="index.html" /> 
+    <link rel="prev" title="Introduction" href="intro.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
           <a href="getting_started.html" title="Getting Started"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Welcome to BsBuilder’s documentation!"
+          <a href="intro.html" title="Introduction"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">BsBuilder v0.1.x documentation</a> &raquo;</li> 
       </ul>
@@ -48,35 +48,32 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-bsbuilder">
-<h2>What is BsBuilder?<a class="headerlink" href="#what-is-bsbuilder" title="Permalink to this headline">¶</a></h2>
-<p>BsBuilder is an automated build system which main purpose is deploying PHP applications
-with easy and in a consistent manner. It could be of course be used to build anything else
-but currently it&#8217;s main purpose is to &#8216;build&#8217; PHP applications.</p>
-<p>BsBuilder not based or derived fron any tool in particular but it takes ideas from all over the
-place: phing, ant, maven, gnumake, qmake (QT), and so on and so on. So thanks to all of those
-great tools.</p>
+  <div class="section" id="setting-bsbuilder-up">
+<h1>Setting BsBuilder Up<a class="headerlink" href="#setting-bsbuilder-up" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-requierements">
+<h2>System Requierements<a class="headerlink" href="#system-requierements" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>BsBuilder requieres:</dt>
+<dd><ol class="first last arabic simple">
+<li>PHP 5.3 &gt; (CLI)</li>
+<li>And that&#8217;s it :)</li>
+</ol>
+</dd>
+<dt>Some tasks may requiere:</dt>
+<dd><ol class="first last arabic simple">
+<li>A tar executable in the PATH</li>
+<li>A bzip executable in the PATH</li>
+<li>A 7zr executable in the PATH</li>
+</ol>
+</dd>
+</dl>
 </div>
-<div class="section" id="a-little-bit-of-history-repeating">
-<h2>A little bit of history repeating<a class="headerlink" href="#a-little-bit-of-history-repeating" title="Permalink to this headline">¶</a></h2>
-<p>Here at BinarySputnik we upload site updates <strong>many</strong> times a week (even many times a day) thus making
-the task of creating the tar files used for uploading a really dull, repeatitive task.</p>
-<p>Ever worse, we <em>made mistakes</em> while doing this, <em>&#8220;Forgot such or such file&#8221;</em>, <em>&#8220;Overwrote config file&#8221;</em>, and so on.
-This had to stop!</p>
-</div>
-<div class="section" id="what-do-you-mean-by-building-php-apps">
-<h2>What do you mean by building PHP apps?<a class="headerlink" href="#what-do-you-mean-by-building-php-apps" title="Permalink to this headline">¶</a></h2>
-<p>Ok, you mamma may have told you that php apps are not buid, that for the most of if, she is right.
-The thing is that you still need to updata production servers, track version, upload big files (or
-small ones), etc.</p>
-<p>We call the process of creating the &#8220;uploadable&#8221; files <em>build</em> and the files themselves
-<em>packages</em>.</p>
-</div>
-<div class="section" id="what-s-next">
-<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
-<p>You can start looking around the code to figure out how BsBuilder works or you can go on and read: <a class="reference internal" href="getting_started.html"><em>Getting Started</em></a></p>
+<div class="section" id="installing">
+<h2>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h2>
+<p>Grab a copy from: <a class="reference internal" href="downloads.html"><em>Dowloads</em></a> and put is somewhere you can reach it.
+Make the <tt class="docutils literal"><span class="pre">bsbuild</span></tt> file executable (Linux only)</p>
+<p>We are working to make this much easier and compatible with both Windows and Linux.</p>
+<p>Don&#8217;t get me wront, BsBuilder works just fine whereever but you may have to run it as: <tt class="docutils literal"><span class="pre">php</span> <span class="pre">bsbuild</span></tt>.</p>
 </div>
 </div>
 
@@ -88,24 +85,22 @@ small ones), etc.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Introduction</a><ul>
-<li><a class="reference internal" href="#what-is-bsbuilder">What is BsBuilder?</a></li>
-<li><a class="reference internal" href="#a-little-bit-of-history-repeating">A little bit of history repeating</a></li>
-<li><a class="reference internal" href="#what-do-you-mean-by-building-php-apps">What do you mean by building PHP apps?</a></li>
-<li><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+<li><a class="reference internal" href="#">Setting BsBuilder Up</a><ul>
+<li><a class="reference internal" href="#system-requierements">System Requierements</a></li>
+<li><a class="reference internal" href="#installing">Installing</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to BsBuilder&#8217;s documentation!</a></p>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="getting_started.html"
                         title="next chapter">Getting Started</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/intro.txt"
+    <li><a href="_sources/setting_up.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -135,7 +130,7 @@ small ones), etc.</p>
           <a href="getting_started.html" title="Getting Started"
              >next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Welcome to BsBuilder’s documentation!"
+          <a href="intro.html" title="Introduction"
              >previous</a> |</li>
         <li><a href="index.html">BsBuilder v0.1.x documentation</a> &raquo;</li> 
       </ul>
