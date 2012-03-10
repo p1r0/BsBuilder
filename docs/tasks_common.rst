@@ -17,6 +17,7 @@ Example
    <property name='basename' value='my-package' />
    <property name='tarfile' value='${basename}.tar.bz2' />
    <property name='sevenzip' value='${basename}.7z' />
+   <property name='target_dir' value='./build' type='prompt' />
 
 Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -25,8 +26,71 @@ Attributes
 Name            Type            Description                                     Default                 Required
 =============== =============== =============================================== ======================= =========        
 name            String          The of the property to export                   No default value        True     
-value           String          The value for the property                      No default value        True     
+value           String          The value for the property                      No default value        True
+type            String          The strategy to use. View Strategies            plain                   False          
 =============== =============== =============================================== ======================= =========                
+
+
+Strategies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The stragegies dictate the behaviour of the task.
+
+The ones available are ``plain`` and ``prompt``.
+
+``plain`` just sets *value* to the property callned *name*. 
+
+``prompt`` asks the user for a value for the property *name* and if provided sets the property
+to that value, otherwise sets the property to *value*.
+
+
+Echo
+--------------------------------------------
+
+The echo task just prints a message to the screen.
+
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+   <echo text='' />
+   <echo text='' color='yellow' />
+
+
+Attributes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+=============== =============== =============================================== ======================= =========        
+Name            Type            Description                                     Default                 Required
+=============== =============== =============================================== ======================= =========        
+text            String          The text to print                               No default value        True     
+color           String          The color to use. View colors                   None                    False
+=============== =============== =============================================== ======================= =========                
+
+
+Colors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The available colors to use are:
+
+   #. black
+   #. dark_gray
+   #. blue
+   #. light_blue
+   #. green
+   #. light_green
+   #. cyan
+   #. light_cyan
+   #. red
+   #. light_red
+   #. purple
+   #. light_purple
+   #. brown
+   #. yellow
+   #. light_gray
+   #. white
 
 
 Copy
