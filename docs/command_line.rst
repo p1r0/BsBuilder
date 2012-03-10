@@ -1,0 +1,24 @@
+BsBuilder Command Line
+=====================================
+
+Right now the only supporte argument is the target name and a special *pseudo* target namd.
+
+If you wish to run the default target just run
+
+.. code-block:: bash
+
+   bsbuilder
+
+If you wish to run on particular target called ``foo`` just run:
+
+.. code-block:: bash
+
+   bsbuilder foo
+
+And if you wish to see a list of available targets and ther (optional) description:
+
+.. code-block:: bash
+
+   bsbuilder help
+
+
