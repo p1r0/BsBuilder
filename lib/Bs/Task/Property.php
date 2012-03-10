@@ -28,13 +28,27 @@ class Bs_Task_Property extends Bs_Task
 
         $name = $this->_project->replaceProperties($name->nodeValue);
 
-        $value = $taskConf->item(0)->attributes->getNamedItem('value');
-        if (!$value)
+        $type = $taskConf->item(0)->attributes->getNamedItem('type');
+        if (!$type)
         {
-            throw new Bs_Excepction('Properties must have a value');
+            $type = 'plain';
+        } else
+        {
+            $type = $this->_project->replaceProperties($type->nodeValue);
         }
 
-        $value = $this->_project->replaceProperties($value->nodeValue);
+        $domDoc = new DOMDocument();
+        $domDoc->appendChild($domDoc->importNode($taskConf->item(0), true));
+
+        $inflector = new Bs_Task_Strategy_Inflector();
+        $strategyClass = $inflector->toCammelCase($type, 'Property_');
+
+        /** @var Bs_Task_Strategy_Property */
+        $strategy = new $strategyClass();
+        $strategy->loadConfig($domDoc);
+        $strategy->setProject($this->_project);
+
+        $value = $strategy->getValue();
 
         $this->_name = $name;
         $this->_value = $value;
