@@ -18,7 +18,12 @@
                 <ignore name='./.build_data' />
                 <ignore name='./.gitignore' />
                 <ignore name='./.git' />
+                <ignore name='./docs' />
             </copy>
+            
+            <mkdir dirname='${basedir}/all/docs' /> 
+            
+            <copy strategy='php' source='./docs/_build/html' dest='${basedir}/all/docs' />
             
             <rename origin='${basedir}/all/bsbuild.php' 
                     dest='${basedir}/all/bsbuild' />
