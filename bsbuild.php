@@ -38,10 +38,13 @@ try
 {
     $targetName = null;
 
-    if($argc > 1)
-    {
-        $targetName = $argv[1];
-    }
+    $commandLine =  new Bs_Configurator_CommandLine();
+    $params = $commandLine->getGetOptConfig();
+    
+    $options = getopt($params[0], $params[1]);
+    $commandLine->setOptions($argc, $argv, $options);
+    
+    $targetName = $commandLine->getTarget();
     /**
      * @todo get configuration file from command line options.
      *       For now build.conf.xml will be asumed.

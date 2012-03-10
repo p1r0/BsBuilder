@@ -32,7 +32,14 @@ class Bs_Project
         }
         else
         {
-            $target = $config->getTarget($targetName, $this);
+            if($targetName == 'help')
+            {
+                $target = new Bs_Target_Help($this->_domDocument, $this);
+            }
+            else
+            {
+                $target = $config->getTarget($targetName, $this);
+            }
         }
         
         $this->runTarget($target);

@@ -4,7 +4,7 @@
     
     <property name='basedir' value='/tmp/bsbuilder' />
 
-    <target name='all'>
+    <target name='all' description='Build the Whole Project'>
         <tasks>
             <mkdir dirname='${basedir}/all' /> 
             
