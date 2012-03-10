@@ -15,6 +15,7 @@ Contents:
    setting_up
    getting_started
    tasks_common
+   command_line
    downloads
 
 Indices and tables
