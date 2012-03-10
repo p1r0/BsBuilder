@@ -1,0 +1,58 @@
+Getting Started
+=====================================
+
+XML
+-------------------------------------------------
+
+BsBuilder can only do what you tell it to, and to do that you have to *speak* XML.
+
+The basic XML structure of you project's build file should include:
+   * One root elemente called ``project``
+   * Any number of elements elementes such as ``property``
+   * At least one ``target`` element with any number of ``task`` sub elements
+
+
+A Very Simple Example
+-------------------------------------------------
+
+We are going to build a project called, yes you know it, hello_world.
+
+.. code-block:: xml
+   :linenos:
+
+   <?xml version="1.0" encoding="UTF-8"?>
+
+   <project name='hello_world' default='all'>
+
+      <target name='all'>
+         <tasks>
+               <mkdir dirname='./build/all' /> 
+
+               <copy source='.' dest='./build/all'>
+                  
+               </copy>
+
+               <package strategy='tar_bz2' name='hellod_workd.tar.bz2' dest='./build/all'  />
+               
+               <echo text='Package save as: ./build/all/hellod_workd.tar.bz2' />
+         </tasks>
+      </target>
+      
+      <target name='clean'>
+         <tasks>
+               <delete dirname='./build' />
+         </tasks>
+      </target>
+   </project>
+
+First we define the project and it's name. And the most important part there is to define a ``default`` target
+which allows us to run bsbuild without arguments.
+
+Then for this example we define two targets: ``default`` and ``clean``.
+
+The ``default`` target it a simple *copy all* and compress build. We add the ``copy`` task and intruct it to 
+copy everything from the current directory to the build directory. We can *ignore* some files and patterns but we'll
+talk about that in a minute.
+
+Then we have the ``package`` task which in this case, compresses everthing from the ``dest`` folder into a file named
+``hellod_workd.tar.bz2``.
