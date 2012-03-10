@@ -47,10 +47,31 @@ class Bs_Target
     
     public function run()
     {
+        //First we run dependencies
+        $this->_runDependencies();
+        
         foreach($this->_tasks as $task)
         {
             $task->parseConfig();
             $task->run();
+        }
+    }
+    
+    protected function _runDependencies()
+    {
+        $xpath = new DOMXPath($this->_domDocument); 
+        $targetConf = $xpath->query("/target");
+        
+        $depends = $targetConf->item(0)->attributes->getNamedItem('depends');
+        if($depends)
+        {
+            $dependencies = explode(',', $this->_project->replaceProperties($depends->nodeValue));
+            foreach($dependencies as $dependency)
+            {
+                $config = Bs_Configurator_Xml::getInstance();
+                $target = $config->getTarget($dependency, $this->_project);
+                $this->_project->runTarget($target);
+            }
         }
     }
     

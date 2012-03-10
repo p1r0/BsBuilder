@@ -35,6 +35,11 @@ class Bs_Project
             $target = $config->getTarget($targetName, $this);
         }
         
+        $this->runTarget($target);
+    }
+    
+    public function runTarget(Bs_Target $target)
+    {
         $target->run();
     }
     
