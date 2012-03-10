@@ -37,5 +37,16 @@ We call the process of creating the "uploadable" files *build* and the files the
 What's next?
 -------------------------------------------------
 
-You can start looking around the code to figure out how BsBuilder works or you can go on and read:
-:doc:`getting_started`
+You can start looking around the code to figure out how BsBuilder works or you can go on and read: :doc:`getting_started`
+
+What the future holds
+-------------------------------------------------
+
+In future versions we plan to add:
+   #. Better error handlin
+   #. More command line options
+   #. Better native support of the ``bsbuild`` executable
+   #. More tasks
+   #. Even more tasks
+   #. And a full automated distribution and deployment system
+
