@@ -2,6 +2,7 @@
 
 class Bs_Task_Strategy_Property_Plain implements Bs_Task_Strategy_Property
 {
+    /** @var Bs_Project */
     protected $_project = null;
     /** @var DOMDocument */
     protected $_domDocument = null;
@@ -22,7 +23,7 @@ class Bs_Task_Strategy_Property_Plain implements Bs_Task_Strategy_Property
             throw new Bs_Excepction('Properties must have a value');
         }
         
-        return $value->nodeValue;
+        return $this->_project->replaceProperties($value->nodeValue);
     }
 
     public function loadConfig(DOMDocument $config)

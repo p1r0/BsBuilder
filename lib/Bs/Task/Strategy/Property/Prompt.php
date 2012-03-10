@@ -2,6 +2,7 @@
 
 class Bs_Task_Strategy_Property_Prompt implements Bs_Task_Strategy_Property
 {
+    /** @var Bs_Project */
     protected $_project = null;
     /** @var DOMDocument */
     protected $_domDocument = null;
@@ -23,7 +24,7 @@ class Bs_Task_Strategy_Property_Prompt implements Bs_Task_Strategy_Property
         }
         else
         {
-            $value = $value->nodeValue;
+            $value = $this->_project->replaceProperties($value->nodeValue);
         }
         
         $name = $property->item(0)->attributes->getNamedItem('name')->nodeValue;
