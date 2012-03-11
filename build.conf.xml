@@ -11,6 +11,15 @@
             <version type='build' file='version.txt' property='version' />
             
             <property name='tarfile' value='bsbuilder-v${version}-${compact_date}.tar.bz2' />
+            
+            <replace value='##version##'
+                     new_value='${version}'
+                     file='./docs/downloads.tpl'
+                     new_file='./docs/downloads.rst' />
+                     
+            <replace value='##tarfile##'
+                     new_value='${tarfile}'
+                     file='./docs/downloads.rst' />
 
             <copy strategy='php' source='.' dest='${basedir}/all'>
                 <ignore name='./test' />
@@ -30,7 +39,7 @@
 
             <package strategy='tar_bz2' name='${tarfile}' dest='${basedir}/all'  />
             
-            <echo text='Package save as: ${basedir}/dist/${tarfile}' />
+            <echo text='Package save as: ${basedir}/all/${tarfile}' />
             <echo text='' />
             <echo text="It's recommended to create a GIT tag for this version using: " 
                   color='yellow'/>

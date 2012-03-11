@@ -7,6 +7,7 @@ class Bs_Task_Replace extends Bs_Task
     protected $_newvalue = '';
     protected $_filename = '';
     protected $_strategy = 'simple_replace';
+    protected $_newFile = null;
 
     public function run()
     {
@@ -16,7 +17,7 @@ class Bs_Task_Replace extends Bs_Task
         $strategy = new $strategyClass();
         $strategy->setProject($this->_project);
         $strategy->loadConfig($this->_domDocument);
-        $strategy->replace($this->_value, $this->_newvalue, $this->_filename);
+        $strategy->replace($this->_value, $this->_newvalue, $this->_filename, $this->_newFile);
     }
 
     public function parseConfig()
@@ -51,6 +52,12 @@ class Bs_Task_Replace extends Bs_Task
         }
 
         $file = $this->_project->replaceProperties($file->nodeValue);
+        
+        $newfile = $taskConf->item(0)->attributes->getNamedItem('new_file');
+        if($newfile)
+        {
+            $this->_newFile = $newfile->nodeValue;
+        }
         
         $strategy = $taskConf->item(0)->attributes->getNamedItem('strategy');
         if($strategy)

@@ -170,6 +170,10 @@ Example
    <replace value='db.password=1234' 
             new_value='db.password=super_secret_password'
             file='./dist/all/configs/application.ini' />
+   <replace value='db.password=1234' 
+            new_value='db.password=super_secret_password'
+            file='./dist/all/configs/application.ini.tpl'
+            new_file='./dist/all/configs/application.ini' />
 
 Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -180,6 +184,8 @@ Name            Type            Description                                     
 value           String          The value to search for                         No default value        True     
 new_value       String          The stringo to replace ``value`` with           No default value        True
 file            String          The file in which to perform this operation     No default value        True
+new_file        String          The filename where the replaced content will    Same value as file      False
+                                be saved     
 strategy        String          The strategy to use. View Strategies            simple_replace          False          
 =============== =============== =============================================== ======================= =========                
 

@@ -10,7 +10,7 @@ class Bs_Task_Strategy_Replace_SimpleReplace implements Bs_Task_Strategy_Replace
         
     }
 
-    public function replace($value, $newvalue, $file)
+    public function replace($value, $newvalue, $file, $newfile = null)
     {
         if(!file_exists($file))
         {
@@ -19,7 +19,13 @@ class Bs_Task_Strategy_Replace_SimpleReplace implements Bs_Task_Strategy_Replace
                               'red');
             return;
         }
-        file_put_contents($file, str_replace($value, $newvalue, file_get_contents($file)));
+        
+        if($newfile == null)
+        {
+            $newfile = $file;
+        }
+        
+        file_put_contents($newfile, str_replace($value, $newvalue, file_get_contents($file)));
     }
 
     public function setProject(Bs_Project $project)
