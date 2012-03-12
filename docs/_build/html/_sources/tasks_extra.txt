@@ -5,7 +5,7 @@ GitHub Upload
 --------------------------------------------
 
 This task allows you to upload a given file to a GitHub repo
-Dowloads area.
+*Downloads* area.
 
 
 Example
@@ -30,13 +30,13 @@ Attributes
 Name            Type            Description                                     Default                 Required
 =============== =============== =============================================== ======================= =========        
 username        String          The github usermane to use                      No default value        True     
-repository      String          The github password to use                      No default value        True
+password        String          The github password to use                      No default value        True
 repository      String          The github repository to upload to              No default value        True
 file            String          The file to upload to github                    No default value        True                    
 =============== =============== =============================================== ======================= =========                
 
 
-Recomendations
+Recommendations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is highly recommended to use a ``password`` property task to prompt the user for the password

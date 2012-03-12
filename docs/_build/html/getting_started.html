@@ -23,7 +23,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="BsBuilder v0.1.x documentation" href="index.html" />
-    <link rel="prev" title="Introduction" href="intro.html" /> 
+    <link rel="next" title="Common Tasks" href="tasks_common.html" />
+    <link rel="prev" title="Setting BsBuilder Up" href="setting_up.html" /> 
   </head>
   <body>
     <div class="related">
@@ -33,7 +34,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="intro.html" title="Introduction"
+          <a href="tasks_common.html" title="Common Tasks"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="setting_up.html" title="Setting BsBuilder Up"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">BsBuilder v0.1.x documentation</a> &raquo;</li> 
       </ul>
@@ -52,8 +56,8 @@
 <dl class="docutils">
 <dt>The basic XML structure of you project&#8217;s build file should include:</dt>
 <dd><ul class="first last simple">
-<li>One root elemente called <tt class="docutils literal"><span class="pre">project</span></tt></li>
-<li>Any number of elements elementes such as <tt class="docutils literal"><span class="pre">property</span></tt></li>
+<li>One root element called <tt class="docutils literal"><span class="pre">project</span></tt></li>
+<li>Any number of elements elements such as <tt class="docutils literal"><span class="pre">property</span></tt></li>
 <li>At least one <tt class="docutils literal"><span class="pre">target</span></tt> element with any number of <tt class="docutils literal"><span class="pre">task</span></tt> sub elements</li>
 </ul>
 </dd>
@@ -114,15 +118,15 @@
 <p>First we define the project and it&#8217;s name. And the most important part there is to define a <tt class="docutils literal"><span class="pre">default</span></tt> target
 which allows us to run bsbuild without arguments.</p>
 <p>Then for this example we define two targets: <tt class="docutils literal"><span class="pre">default</span></tt> and <tt class="docutils literal"><span class="pre">clean</span></tt>.</p>
-<p>The <tt class="docutils literal"><span class="pre">default</span></tt> target it a simple <em>copy all</em> and compress build. We add the <tt class="docutils literal"><span class="pre">copy</span></tt> task and intruct it to
+<p>The <tt class="docutils literal"><span class="pre">default</span></tt> target it a simple <em>copy all</em> and compress build. We add the <tt class="docutils literal"><span class="pre">copy</span></tt> task and instruct it to
 copy everything from the current directory to the build directory. We can <em>ignore</em> some files and patterns but we&#8217;ll
 talk about that in a minute.</p>
-<p>Then we have the <tt class="docutils literal"><span class="pre">package</span></tt> task which in this case, compresses everthing from the <tt class="docutils literal"><span class="pre">dest</span></tt> folder into a file named
+<p>Then we have the <tt class="docutils literal"><span class="pre">package</span></tt> task which in this case, compresses everything from the <tt class="docutils literal"><span class="pre">dest</span></tt> folder into a file named
 <tt class="docutils literal"><span class="pre">hellod_workd.tar.bz2</span></tt>.</p>
 </div>
 <div class="section" id="run-bsbuilder">
 <h2>Run BsBuilder<a class="headerlink" href="#run-bsbuilder" title="Permalink to this headline">¶</a></h2>
-<p>To run bs builder to build the example project we just run: <tt class="docutils literal"><span class="pre">bsbuild</span></tt> whithout arguments from the folder where we
+<p>To run bs builder to build the example project we just run: <tt class="docutils literal"><span class="pre">bsbuild</span></tt> without arguments from the folder where we
 have the build.conf.xml file.</p>
 </div>
 </div>
@@ -144,8 +148,11 @@ have the build.conf.xml file.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="intro.html"
-                        title="previous chapter">Introduction</a></p>
+  <p class="topless"><a href="setting_up.html"
+                        title="previous chapter">Setting BsBuilder Up</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tasks_common.html"
+                        title="next chapter">Common Tasks</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/getting_started.txt"
@@ -175,7 +182,10 @@ have the build.conf.xml file.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="intro.html" title="Introduction"
+          <a href="tasks_common.html" title="Common Tasks"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="setting_up.html" title="Setting BsBuilder Up"
              >previous</a> |</li>
         <li><a href="index.html">BsBuilder v0.1.x documentation</a> &raquo;</li> 
       </ul>

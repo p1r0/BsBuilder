@@ -46,7 +46,7 @@ to that value, otherwise sets the property to *value*.
 
 ``password`` is the same as prompt but instead of the actual text stars (``*``) are displayed.
 
-NOTE: ``password`` works only on *nix systems.
+NOTE: ``password`` works only on nix systems.
 
 
 Echo
@@ -187,7 +187,7 @@ Attributes
 Name            Type            Description                                     Default                 Required
 =============== =============== =============================================== ======================= =========        
 value           String          The value to search for                         No default value        True     
-new_value       String          The string to replace ``value`` with           No default value        True
+new_value       String          The string to replace ``value`` with            No default value        True
 file            String          The file in which to perform this operation     No default value        True
 new_file        String          The filename where the replaced content will    Same value as file      False
                                 be saved     

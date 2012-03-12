@@ -5,7 +5,7 @@ GitHub Upload
 --------------------------------------------
 
 This task allows you to upload a given file to a GitHub repo
-Downloads area.
+*Downloads* area.
 
 
 Example

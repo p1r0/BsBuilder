@@ -1,6 +1,6 @@
-.. _Here: https://github.com/downloads/p1r0/BsBuilder/bsbuilder-v0.1.37-20120311234321.tar.bz2
+.. _Here: https://github.com/downloads/p1r0/BsBuilder/bsbuilder-v0.1.39-20120312014730.tar.bz2
 
-Dowloads
+Downloads
 =====================================
 
 Latests Development Version
@@ -13,5 +13,5 @@ To get the most up to date version of BsBuilder you can clone our github repo fr
 Tarball
 -------------------------------------------------
 
-Latest version is: 0.1.37.
+Latest version is: 0.1.39.
 And you can download it from Here_

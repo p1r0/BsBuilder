@@ -1,4 +1,4 @@
-Commont Taks
+Common Tasks
 =====================================
 
 Property
@@ -35,18 +35,18 @@ type            String          The strategy to use. View Strategies            
 Strategies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The stragegies dictate the behaviour of the task.
+The strategies dictate the behavior of the task.
 
 The ones available are ``plain``, ``prompt`` and ``password``.
 
-``plain`` just sets *value* to the property callned *name*. 
+``plain`` just sets *value* to the property called *name*. 
 
 ``prompt`` asks the user for a value for the property *name* and if provided sets the property
 to that value, otherwise sets the property to *value*.
 
 ``password`` is the same as prompt but instead of the actual text stars (``*``) are displayed.
 
-NOTE: ``passoword`` works only on *nix systems.
+NOTE: ``password`` works only on nix systems.
 
 
 Echo
@@ -137,23 +137,23 @@ source          String          The source file or directory to copy            
 dest            String          The destination directory                       No default value        True
 strategy        String          The strategy to use. View Strategies            php                     False
 memory          String          Either ``on`` or ``off``                        off                     False
-memory_file     String          Where to save the *momory*                      No default value        False                                        
+memory_file     String          Where to save the *memory*                      No default value        False                                        
 =============== =============== =============================================== ======================= =========                
 
 
 Strategies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The stragegies dictate the behaviour of the task.
+The strategies dictate the behavior of the task.
 
-Right now the only one availble is ``php`` which handles the copy using only PHP. In the future we will add more
+Right now the only one available is ``php`` which handles the copy using only PHP. In the future we will add more
 and you will have the ability to create your own.
 
 Memory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The copy task has a special attribute named ``memory``. If you turn this ``on`` prior copyin the system will do 2
-things: first it will check if the ``memory_file`` exists and if yes load it, and then it will check wheater each
+The copy task has a special attribute named ``memory``. If you turn this ``on`` prior copying the system will do 2
+things: first it will check if the ``memory_file`` exists and if yes load it, and then it will check weather each
 file's m5d checksum is different from those saved in the ``memory_file`` and **only** copy those files that have
 actually changed from last build.
 
@@ -187,7 +187,7 @@ Attributes
 Name            Type            Description                                     Default                 Required
 =============== =============== =============================================== ======================= =========        
 value           String          The value to search for                         No default value        True     
-new_value       String          The stringo to replace ``value`` with           No default value        True
+new_value       String          The string to replace ``value`` with            No default value        True
 file            String          The file in which to perform this operation     No default value        True
 new_file        String          The filename where the replaced content will    Same value as file      False
                                 be saved     
@@ -199,9 +199,9 @@ NOTE: if ``file`` is not found a warning is displays but nothing happens.
 Strategies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The stragegies dictate the behaviour of the task.
+The strategies dictate the behavior of the task.
 
-Right now the only one availble is ``simple_replace`` which uses php ``str_replace`` to do the replacing.
+Right now the only one available is ``simple_replace`` which uses php ``str_replace`` to do the replacing.
 
 Package
 --------------------------------------------
@@ -233,7 +233,7 @@ NOTE: if ``file`` is not found a warning is displays but nothing happens.
 Strategies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The stragegies dictate the behaviour of the task.
+The strategies dictate the behavior of the task.
 
 You can user either ``tar_bz2`` or ``7z``. 
 
@@ -250,7 +250,7 @@ This task increments a version number composed of MAJOR.MINOR.BUILD in the follo
 if type is ``build`` only the BUILD part is incremented. If type is ``major`` only the MAJOR and BUILD
 parts are incremented. And finally, if type is ``minor`` only the MAJOR and MINOR parts are incremented.
 
-You can pass an optional attribute intructing the task to export such version *numbe* as a property.
+You can pass an optional attribute instructing the task to export such version *number* as a property.
 
 You also have to set a filename to save the version number.
 
