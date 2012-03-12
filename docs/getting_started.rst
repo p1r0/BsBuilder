@@ -7,8 +7,8 @@ XML
 BsBuilder can only do what you tell it to, and to do that you have to *speak* XML.
 
 The basic XML structure of you project's build file should include:
-   * One root elemente called ``project``
-   * Any number of elements elementes such as ``property``
+   * One root element called ``project``
+   * Any number of elements elements such as ``property``
    * At least one ``target`` element with any number of ``task`` sub elements
 
 
@@ -50,16 +50,16 @@ which allows us to run bsbuild without arguments.
 
 Then for this example we define two targets: ``default`` and ``clean``.
 
-The ``default`` target it a simple *copy all* and compress build. We add the ``copy`` task and intruct it to 
+The ``default`` target it a simple *copy all* and compress build. We add the ``copy`` task and instruct it to 
 copy everything from the current directory to the build directory. We can *ignore* some files and patterns but we'll
 talk about that in a minute.
 
-Then we have the ``package`` task which in this case, compresses everthing from the ``dest`` folder into a file named
+Then we have the ``package`` task which in this case, compresses everything from the ``dest`` folder into a file named
 ``hellod_workd.tar.bz2``.
 
 Run BsBuilder
 -------------------------------------------------
 
-To run bs builder to build the example project we just run: ``bsbuild`` whithout arguments from the folder where we
+To run bs builder to build the example project we just run: ``bsbuild`` without arguments from the folder where we
 have the build.conf.xml file.
 

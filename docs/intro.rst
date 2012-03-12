@@ -8,7 +8,7 @@ BsBuilder is an automated build system which main purpose is deploying PHP appli
 with easy and in a consistent manner. It could be of course be used to build anything else
 but currently it's main purpose is to 'build' PHP applications.
 
-BsBuilder not based or derived fron any tool in particular but it takes ideas from all over the
+BsBuilder not based or derived from any tool in particular but it takes ideas from all over the
 place: phing, ant, maven, gnumake, qmake (QT), and so on and so on. So thanks to all of those
 great tools.
 
@@ -17,7 +17,7 @@ A little bit of history repeating
 -------------------------------------------------
 
 Here at BinarySputnik we upload site updates **many** times a week (even many times a day) thus making
-the task of creating the tar files used for uploading a really dull, repeatitive task.
+the task of creating the tar files used for uploading a really dull, repetitive task.
 
 Ever worse, we *made mistakes* while doing this, *"Forgot such or such file"*, *"Overwrote config file"*, and so on.
 This had to stop!
@@ -26,8 +26,8 @@ This had to stop!
 What do you mean by building PHP apps?
 -------------------------------------------------
 
-Ok, you mamma may have told you that php apps are not buid, that for the most of if, she is right.
-The thing is that you still need to updata production servers, track version, upload big files (or
+Ok, your mama may have told you that php apps are not build, that for the most of if, she is right.
+The thing is that you still need to update production servers, track version, upload big files (or
 small ones), etc. 
 
 We call the process of creating the "uploadable" files *build* and the files themselves
@@ -43,7 +43,7 @@ What the future holds
 -------------------------------------------------
 
 In future versions we plan to add:
-   #. Better error handlin
+   #. Better error handling
    #. More command line options
    #. Better native support of the ``bsbuild`` executable
    #. More tasks

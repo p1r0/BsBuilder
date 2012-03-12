@@ -1,6 +1,6 @@
 .. _Here: https://github.com/downloads/p1r0/BsBuilder/bsbuilder-v0.1.37-20120311234321.tar.bz2
 
-Dowloads
+Downloads
 =====================================
 
 Latests Development Version

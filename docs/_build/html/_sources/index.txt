@@ -15,6 +15,7 @@ Contents:
    setting_up
    getting_started
    tasks_common
+   tasks_extra
    command_line
    downloads
    licence

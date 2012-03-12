@@ -1,0 +1,43 @@
+Extra Tasks
+=====================================
+
+GitHub Upload
+--------------------------------------------
+
+This task allows you to upload a given file to a GitHub repo
+Downloads area.
+
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+   <github_upload username='your_username'
+                           password='your_password'
+                           repository='your_repo'
+                           file='/path/to/file.tar.bz2' />
+
+   <github_upload username='${github_username}'
+                           password='${github_password}'
+                           repository='your_repo'
+                           file='${file}' />
+
+Attributes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+=============== =============== =============================================== ======================= =========        
+Name            Type            Description                                     Default                 Required
+=============== =============== =============================================== ======================= =========        
+username        String          The github usermane to use                      No default value        True     
+password        String          The github password to use                      No default value        True
+repository      String          The github repository to upload to              No default value        True
+file            String          The file to upload to github                    No default value        True                    
+=============== =============== =============================================== ======================= =========                
+
+
+Recommendations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is highly recommended to use a ``password`` property task to prompt the user for the password
+instead of just writing it in the xml config file. Both ways are ok though.

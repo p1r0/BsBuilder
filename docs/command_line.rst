@@ -1,7 +1,7 @@
 BsBuilder Command Line
 =====================================
 
-Right now the only supporte argument is the target name and a special *pseudo* target namd.
+Right now the only support argument is the target name and a special *pseudo* target namd.
 
 If you wish to run the default target just run
 

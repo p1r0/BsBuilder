@@ -18,6 +18,7 @@ Example
    <property name='tarfile' value='${basename}.tar.bz2' />
    <property name='sevenzip' value='${basename}.7z' />
    <property name='target_dir' value='./build' type='prompt' />
+   <property name='passw' type='password' />
 
 Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -36,12 +37,16 @@ Strategies
 
 The stragegies dictate the behaviour of the task.
 
-The ones available are ``plain`` and ``prompt``.
+The ones available are ``plain``, ``prompt`` and ``password``.
 
 ``plain`` just sets *value* to the property callned *name*. 
 
 ``prompt`` asks the user for a value for the property *name* and if provided sets the property
 to that value, otherwise sets the property to *value*.
+
+``password`` is the same as prompt but instead of the actual text stars (``*``) are displayed.
+
+NOTE: ``passoword`` works only on *nix systems.
 
 
 Echo

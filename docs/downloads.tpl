@@ -1,6 +1,6 @@
 .. _Here: https://github.com/downloads/p1r0/BsBuilder/##tarfile##
 
-Dowloads
+Downloads
 =====================================
 
 Latests Development Version

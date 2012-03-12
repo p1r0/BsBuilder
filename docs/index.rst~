@@ -17,6 +17,7 @@ Contents:
    tasks_common
    command_line
    downloads
+   licence
 
 Indices and tables
 ==================

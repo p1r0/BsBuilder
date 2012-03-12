@@ -56,3 +56,10 @@ talk about that in a minute.
 
 Then we have the ``package`` task which in this case, compresses everthing from the ``dest`` folder into a file named
 ``hellod_workd.tar.bz2``.
+
+Run BsBuilder
+-------------------------------------------------
+
+To run bs builder to build the example project we just run: ``bsbuild`` whithout arguments from the folder where we
+have the build.conf.xml file.
+
