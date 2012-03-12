@@ -80,6 +80,8 @@ class Bs_Task_GithubUpload extends Bs_Task
         $parameters = array('name'=>  basename($this->_file),
                             'size', filesize($this->_file));
         
+        $queryString = utf8_encode(json_encode($parameters));
+        
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $queryString);
         
