@@ -54,4 +54,17 @@
             <delete dirname='${basedir}' />
         </tasks>
     </target>
+    
+    <target name='publish'>
+        <tasks>
+            <property name='github_username' type='prompt' />
+            <property name='github_password' type='password' />
+            <property name='file' type='prompt' />
+            
+            <github_upload username='${github_username}'
+                           password='${github_password}'
+                           repository='BsBuilder'
+                           file='${file}' />
+        </tasks>
+    </target>
 </project>
