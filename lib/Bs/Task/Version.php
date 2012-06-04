@@ -24,7 +24,10 @@ class Bs_Task_Version extends Bs_Task
             $this->_minor++;
         }
         
-        $this->_build++;
+        if($this->_type != 'get')
+        {
+            $this->_build++;
+        }
         
         $this->_saveVersionFile();
         

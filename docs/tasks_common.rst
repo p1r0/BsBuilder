@@ -3,6 +3,7 @@ Common Tasks
 
 Property
 --------------------------------------------
+.. index:: Property
 
 The property task defines a property (kind of like a variable) that can be 
 used later within the build file.
@@ -51,6 +52,7 @@ NOTE: ``password`` works only on nix systems.
 
 Echo
 --------------------------------------------
+.. index:: Echo
 
 The echo task just prints a message to the screen.
 
@@ -100,6 +102,7 @@ The available colors to use are:
 
 Copy
 --------------------------------------------
+.. index:: Copy
 
 This tasks handles the copy of one file or directory from one source to a destination.
 Right now it only supports *ignoring* certain files or patterns. In the future it will support filesets.
@@ -164,6 +167,7 @@ build.
 
 Replace
 --------------------------------------------
+.. index:: Replace
 
 This tasks allows you to replace a portion of text of patter in one file.
 
@@ -205,6 +209,7 @@ Right now the only one available is ``simple_replace`` which uses php ``str_repl
 
 Package
 --------------------------------------------
+.. index:: Package
 
 This tasks packages the application.
 
@@ -244,6 +249,7 @@ The ``7z`` strategy uses the system's 7zr binary to create a ``.7z`` package.
 
 Version
 --------------------------------------------
+.. index:: Version
 
 This task increments a version number composed of MAJOR.MINOR.BUILD in the following manner:
 
@@ -264,11 +270,11 @@ Example
 Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-=============== =============== =============================================== ======================= =========        
-Name            Type            Description                                     Default                 Required
-=============== =============== =============================================== ======================= =========
-type            Enum            One of: ``build``, ``minor``, ``major``         No default value        True             
-file            String          The file to save the version num to             No default value        True     
-property        String          The property name to export the version num to  No default value        false
-=============== =============== =============================================== ======================= ========= 
+=============== =============== ===============================================    ======================= =========        
+Name            Type            Description                                        Default                 Required
+=============== =============== ===============================================    ======================= =========
+type            Enum            One of: ``build``, ``minor``, ``major``, ``get``   No default value        True             
+file            String          The file to save the version num to                No default value        True     
+property        String          The property name to export the version num to     No default value        false
+=============== =============== ===============================================    ======================= ========= 
 
